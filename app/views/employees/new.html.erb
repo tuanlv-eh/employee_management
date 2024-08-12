@@ -1,0 +1,38 @@
+<%= form_with(model: @employee, local: true) do |form| %>
+  <% if @employee.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@employee.errors.count, "lỗi") %> đã xảy ra:</h2>
+      <ul>
+        <% @employee.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name, "Tên" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :position, "Chức vụ" %>
+    <%= form.text_field :position %>
+  </div>
+
+  <div class="field">
+    <%= form.label :department, "Phòng ban" %>
+    <%= form.text_field :department %>
+  </div>
+
+  <div class="field">
+    <%= form.label :salary, "Lương" %>
+    <%= form.number_field :salary %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+<%= link_to 'Quay lại danh sách', employees_path %>

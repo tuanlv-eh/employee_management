@@ -1,0 +1,31 @@
+<h1>Danh sách nhân viên</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tên</th>
+      <th>Chức vụ</th>
+      <th>Phòng ban</th>
+      <th>Lương</th>
+      <th>Thao tác</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @employees.each do |employee| %>
+      <tr>
+        <td><%= employee.name %></td>
+        <td><%= employee.position %></td>
+        <td><%= employee.department %></td>
+        <td><%= number_to_currency(employee.salary) %></td>
+        <td>
+          <%= link_to 'Xem', employee_path(employee) %>
+          <%= link_to 'Sửa', edit_employee_path(employee) %>
+          <%= button_to 'Xóa', employee, method: :delete, form: { style: 'display:inline;' }, onclick: "return confirm('Bạn có chắc chắn muốn xóa?');" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'Tạo nhân viên mới', new_employee_path %>

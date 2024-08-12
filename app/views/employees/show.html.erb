@@ -1,0 +1,24 @@
+<h1>Thông tin nhân viên</h1>
+
+<p>
+  <strong>Tên:</strong>
+  <%= @employee.name %>
+</p>
+
+<p>
+  <strong>Chức vụ:</strong>
+  <%= @employee.position %>
+</p>
+
+<p>
+  <strong>Phòng ban:</strong>
+  <%= @employee.department %>
+</p>
+
+<p>
+  <strong>Lương:</strong>
+  <%= number_to_currency(@employee.salary) %>
+</p>
+
+<%= link_to 'Sửa', edit_employee_path(@employee) %> |
+<%= link_to 'Quay lại danh sách', employees_path %>
