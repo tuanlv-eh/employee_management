@@ -1,56 +1,90 @@
-*.gem
-*.rbc
-/.config
-/coverage/
-/InstalledFiles
-/pkg/
-/spec/reports/
-/spec/examples.txt
-/test/tmp/
-/test/version_tmp/
-/tmp/
-
-# Used by dotenv library to load environment variables.
-# .env
-
-# Ignore Byebug command history file.
-.byebug_history
-
-## Specific to RubyMotion:
-.dat*
-.repl_history
-build/
-*.bridgesupport
-build-iPhoneOS/
-build-iPhoneSimulator/
-
-## Specific to RubyMotion (use of CocoaPods):
-#
-# We recommend against adding the Pods directory to your .gitignore. However
-# you should judge for yourself, the pros and cons are mentioned at:
-# https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
-#
-# vendor/Pods/
-
-## Documentation cache and generated files:
-/.yardoc/
-/_yardoc/
-/doc/
-/rdoc/
-
-## Environment normalization:
-/.bundle/
-/vendor/bundle
-/lib/bundler/man/
-
-# for a library or gem, you might want to ignore these files since the code is
-# intended to run in multiple environments; otherwise, check them in:
-# Gemfile.lock
-# .ruby-version
-# .ruby-gemset
-
-# unless supporting rvm < 1.11.0 or doing something fancy, ignore this:
+.env
 .rvmrc
+.ruby-gemset
+.rbenv-gemsets
+.powrc
+*.rbc
+*.sassc
+.sass-cache
+capybara-*.html
+.rspec
+/.bundle
+/vendor/bundle
+/vendor/ruby
+/log/*
+.log
+/tmp/*
+/db/*.sqlite3
+/public/system/*
+public/assets/*
+public/vendor/reactStuff.js
+public/vendor/reactStuff-manifest.json
+/private_uploads/*
+/coverage/
+/spec/tmp/*
+**.orig
+rerun.txt
+pickle-email-*.html
+.DS_Store
+config/mongoid.yml
+config/initializers/echosign_api.rb
+public/uploads/*
+private_uploads/*
+coverage/*
+signed_pdf.pdf
+latest.dump
+logfile
+vendor/gems/
+spec/javascripts/compiled/*
+public/javascripts/compiled/*
+.sly
+*.dump
+/lib/tasks/test.rake
+tags
+.idea/
 
-# Used by RuboCop. Remote config files pulled in from inherit_from directive.
-# .rubocop-https?--*
+# Ignore application configuration
+/config/application.yml
+/config/intermediary.yml
+/config/database.yml
+
+# Zeus files
+zeus.json
+custom_plan.rb
+gems.tags
+gems.tag
+app/models/schema_migration.rb
+dump.rdb
+node_modules/
+/app/assets/javascripts/react_bundle*.js
+/app/assets/stylesheets/react_bundle*.css
+npm-debug.log
+npm-debug.log.*
+.eslintcache
+
+.tmp
+.nyc_output
+
+GPATH
+GRTAGS
+GTAGS
+ETAGS
+bundle_gems.tar.gz
+node_modules.tar.gz
+.floo
+.flooignore
+.prettierignore
+build/storybook/.out
+.vscode/
+.importjs.js
+.byebug_history
+.rubocop-http*
+
+.solargraph.yml
+
+# Ignore local stubbing for feature flags
+config/initializers/zz_local_stubs.rb
+
+.dumbjump
+.projections.json
+*.pem

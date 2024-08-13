@@ -1390,3 +1390,193 @@ Processing by EmployeesController#index as TURBO_STREAM
 Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.1ms | Allocations: 2791)
 
 
+Started GET "/employees/new" for 127.0.0.1 at 2024-08-13 13:53:31 +0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EmployeesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering employees/new.html.erb within layouts/application
+  Rendered employees/new.html.erb within layouts/application (Duration: 7.9ms | Allocations: 2549)
+  Rendered layout layouts/application.html.erb (Duration: 92.6ms | Allocations: 35532)
+Completed 200 OK in 132ms (Views: 96.8ms | ActiveRecord: 0.4ms | Allocations: 58329)
+
+
+Started POST "/employees" for 127.0.0.1 at 2024-08-13 13:53:51 +0700
+Processing by EmployeesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "employee"=>{"name"=>"Alex", "position"=>"PO", "department"=>"IT", "salary"=>"901909090"}, "commit"=>"Create Employee"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/employees_controller.rb:21:in `create'
+  [1m[36mEmployee Create (0.7ms)[0m  [1m[32mINSERT INTO "employees" ("name", "position", "department", "salary", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Alex"], ["position", "PO"], ["department", "IT"], ["salary", 901909090.0], ["created_at", "2024-08-13 06:53:51.516531"], ["updated_at", "2024-08-13 06:53:51.516531"]]
+  ↳ app/controllers/employees_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/employees_controller.rb:21:in `create'
+Redirected to http://127.0.0.1:3000/employees/6
+Completed 302 Found in 7ms (ActiveRecord: 1.6ms | Allocations: 2775)
+
+
+Started GET "/employees/6" for 127.0.0.1 at 2024-08-13 13:53:51 +0700
+Processing by EmployeesController#show as TURBO_STREAM
+  Parameters: {"id"=>"6"}
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering employees/show.html.erb within layouts/application
+  Rendered employees/show.html.erb within layouts/application (Duration: 5.4ms | Allocations: 1926)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 3449)
+Completed 200 OK in 12ms (Views: 8.1ms | ActiveRecord: 0.1ms | Allocations: 5973)
+
+
+Started GET "/employees" for 127.0.0.1 at 2024-08-13 13:53:56 +0700
+Processing by EmployeesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:15
+  Rendered employees/index.html.erb within layouts/application (Duration: 5.7ms | Allocations: 2046)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 3376)
+Completed 200 OK in 11ms (Views: 9.1ms | ActiveRecord: 0.2ms | Allocations: 3690)
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2024-08-13 13:53:59 +0700
+Processing by EmployeesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering employees/new.html.erb within layouts/application
+  Rendered employees/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1056)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 2380)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.0ms | Allocations: 2641)
+
+
+Started POST "/employees" for 127.0.0.1 at 2024-08-13 13:54:13 +0700
+Processing by EmployeesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "employee"=>{"name"=>"Aaron", "position"=>"DS", "department"=>"IT", "salary"=>"192839283"}, "commit"=>"Create Employee"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/employees_controller.rb:21:in `create'
+  [1m[36mEmployee Create (0.4ms)[0m  [1m[32mINSERT INTO "employees" ("name", "position", "department", "salary", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Aaron"], ["position", "DS"], ["department", "IT"], ["salary", 192839283.0], ["created_at", "2024-08-13 06:54:13.132851"], ["updated_at", "2024-08-13 06:54:13.132851"]]
+  ↳ app/controllers/employees_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/employees_controller.rb:21:in `create'
+Redirected to http://127.0.0.1:3000/employees/7
+Completed 302 Found in 9ms (ActiveRecord: 1.5ms | Allocations: 2033)
+
+
+Started GET "/employees/7" for 127.0.0.1 at 2024-08-13 13:54:13 +0700
+Processing by EmployeesController#show as TURBO_STREAM
+  Parameters: {"id"=>"7"}
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering employees/show.html.erb within layouts/application
+  Rendered employees/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 216)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 1722)
+Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 0.1ms | Allocations: 2402)
+
+
+Started GET "/employees" for 127.0.0.1 at 2024-08-13 13:54:14 +0700
+Processing by EmployeesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:15
+  Rendered employees/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 2071)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 3393)
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.2ms | Allocations: 3643)
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2024-08-13 13:54:15 +0700
+Processing by EmployeesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering employees/new.html.erb within layouts/application
+  Rendered employees/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1059)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 2381)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.0ms | Allocations: 2634)
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2024-08-13 13:54:16 +0700
+Processing by EmployeesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering employees/new.html.erb within layouts/application
+  Rendered employees/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1063)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 2385)
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.0ms | Allocations: 2638)
+
+
+Started POST "/employees" for 127.0.0.1 at 2024-08-13 13:54:48 +0700
+Processing by EmployeesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "employee"=>{"name"=>"An Tran", "position"=>"FE Developer", "department"=>"IT", "salary"=>"71989898989"}, "commit"=>"Create Employee"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/employees_controller.rb:21:in `create'
+  [1m[36mEmployee Create (0.4ms)[0m  [1m[32mINSERT INTO "employees" ("name", "position", "department", "salary", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "An Tran"], ["position", "FE Developer"], ["department", "IT"], ["salary", 71989898989.0], ["created_at", "2024-08-13 06:54:48.726438"], ["updated_at", "2024-08-13 06:54:48.726438"]]
+  ↳ app/controllers/employees_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/employees_controller.rb:21:in `create'
+Redirected to http://127.0.0.1:3000/employees/8
+Completed 302 Found in 7ms (ActiveRecord: 1.4ms | Allocations: 2025)
+
+
+Started GET "/employees/8" for 127.0.0.1 at 2024-08-13 13:54:48 +0700
+Processing by EmployeesController#show as TURBO_STREAM
+  Parameters: {"id"=>"8"}
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering employees/show.html.erb within layouts/application
+  Rendered employees/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 219)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 1725)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.1ms | Allocations: 2404)
+
+
+Started GET "/employees" for 127.0.0.1 at 2024-08-13 13:54:50 +0700
+Processing by EmployeesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:15
+  Rendered employees/index.html.erb within layouts/application (Duration: 5.8ms | Allocations: 2521)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 3843)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.1ms | Allocations: 4094)
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2024-08-13 13:55:06 +0700
+Processing by EmployeesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering employees/new.html.erb within layouts/application
+  Rendered employees/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1058)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 2380)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.0ms | Allocations: 2633)
+
+
+Started POST "/employees" for 127.0.0.1 at 2024-08-13 13:55:23 +0700
+Processing by EmployeesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "employee"=>{"name"=>"Tuan Le", "position"=>"BE Dev", "department"=>"IT", "salary"=>"10"}, "commit"=>"Create Employee"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/employees_controller.rb:21:in `create'
+  [1m[36mEmployee Create (0.4ms)[0m  [1m[32mINSERT INTO "employees" ("name", "position", "department", "salary", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Tuan Le"], ["position", "BE Dev"], ["department", "IT"], ["salary", 10.0], ["created_at", "2024-08-13 06:55:23.398844"], ["updated_at", "2024-08-13 06:55:23.398844"]]
+  ↳ app/controllers/employees_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/employees_controller.rb:21:in `create'
+Redirected to http://127.0.0.1:3000/employees/9
+Completed 302 Found in 7ms (ActiveRecord: 1.4ms | Allocations: 2016)
+
+
+Started GET "/employees/9" for 127.0.0.1 at 2024-08-13 13:55:23 +0700
+Processing by EmployeesController#show as TURBO_STREAM
+  Parameters: {"id"=>"9"}
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering employees/show.html.erb within layouts/application
+  Rendered employees/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 206)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 1694)
+Completed 200 OK in 6ms (Views: 3.9ms | ActiveRecord: 0.1ms | Allocations: 2372)
+
+
+Started GET "/employees" for 127.0.0.1 at 2024-08-13 13:55:24 +0700
+Processing by EmployeesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:15
+  Rendered employees/index.html.erb within layouts/application (Duration: 6.7ms | Allocations: 2967)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 4289)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.1ms | Allocations: 4539)
+
+
